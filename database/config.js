@@ -2,7 +2,7 @@
 const Sequelize = require('sequelize');
 const db = {}
 //config conexao com o banco de dados 
-const sequelize = new Sequelize('starwars', 'root', '', {
+const sequelize = new Sequelize('qtarkus', 'root', '1234', {
     host:'localhost',
     dialect: 'mysql',
     operatorAliases: false,
@@ -11,6 +11,9 @@ const sequelize = new Sequelize('starwars', 'root', '', {
         min: 0,
         acquire: 30000,
         idle: 1000
+    },
+    define: {
+        timestamps: false
     }
 
 })

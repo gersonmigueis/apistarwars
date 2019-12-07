@@ -2,7 +2,7 @@ const Sequelize = require("sequelize");
 const db = require('../database/config.js');
 
 module.exports = db.Sequelize.define(
-    'usuario',
+    'users',
     {
         id : {
             type: Sequelize.INTEGER,
@@ -18,14 +18,14 @@ module.exports = db.Sequelize.define(
         password: {
             type: Sequelize.STRING
         },
-        //este é meu tmstamp
-        created : {
+        createdAt : {
             type: Sequelize.DATE,
             defaultValue: Sequelize.NOW
         } 
+        
     },
     {
-        timestamp: false
+        timestamps: false
     }
 
 )

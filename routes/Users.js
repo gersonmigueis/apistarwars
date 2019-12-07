@@ -31,7 +31,7 @@ users.post('/register', (req, res) => {
           userData.password = hash
           User.create(userData)
             .then(user => {
-              res.json({ status: user.email + 'Registrado.' })
+              res.json({ status: user.email + ' Registrado!' })
             })
             .catch(err => {
               res.send('error: ' + err)
@@ -59,7 +59,7 @@ users.post('/login', (req, res) => {
             //se for igual a digitada, gero o JWT
           let token = jwt.sign(user.dataValues, process.env.SECRET_KEY, {
             expiresIn: 1440
-          })
+          }) //faltando finalizar esse if
           //token gerado
           res.send(token)
         }
