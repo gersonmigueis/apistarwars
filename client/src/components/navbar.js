@@ -21,8 +21,8 @@ class Home extends Component {
          const userLink = ( 
             <ul className="navbar-nav">
                 <li className="nav-item">
-                    <Link to="/profile" className="nav-link">
-                        User
+                    <Link to="/login" className="nav-link">
+                        Logout
                     </Link>
                 </li>
                 <li className="nav-item">
